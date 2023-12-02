@@ -49,7 +49,7 @@ jobs:
         cd ${GITHUB_WORKSPACE}/workspace
         git config --global user.name "Hikaru's Action-Build-Bot"
         git config --global user.email "Android@teio.tk"
-        repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
+        repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-9.0
     - name: Repo Sync
       run: |
         cd ${GITHUB_WORKSPACE}/workspace
@@ -74,15 +74,15 @@ jobs:
     - name: Clone Device Tree
       run: |
         cd ${GITHUB_WORKSPACE}/workspace
-        git clone https://github.com/coolscode/ofrp_device_xiaomi_cezanne.git -b android-12 ./device/xiaomi/cezanne
+        git clone https://github.com/f1781600921/android_device_IH519Gtest.git -b main ./device/ecarx/IHU519G
     - name: Building
       run: |
         cd ${GITHUB_WORKSPACE}/workspace
         source build/envsetup.sh
-        lunch twrp_cezanne-eng
+        lunch twrp_IHU519G-eng
         mka recoveryimage -j$(nproc --all)
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
-        name: cezanne_twrp-12.1
-        path: workspace/out/target/product/cezanne/recovery.img
+        name: IHU519G_twrp-12.1
+        path: workspace/out/target/product/IHU519G/recovery.img
