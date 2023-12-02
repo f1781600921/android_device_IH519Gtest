@@ -73,25 +73,25 @@ export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/platform/bootdevice/by-name/ven
 export FOX_RECOVERY_BOOT_PARTITION="/dev/block/platform/bootdevice/by-name/boot"
 
 # 避免在已加密设备上应用强制加密补丁
-export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
+# export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 # 跳过FBE解密流程（防止卡在橙狐LOGO或Redmi/Mi LOGO界面）
 # export OF_SKIP_FBE_DECRYPTION=1
 # 当ROM大于等于指定安卓SDK等级时，跳过FBE解密流程
 # export OF_SKIP_FBE_DECRYPTION_SDKVERSION=31
 # 在MIUI OTA还原期间尝试解密内部存储（而不是错误退出）
-export OF_OTA_RES_DECRYPT=1
+# export OF_OTA_RES_DECRYPT=1
 # 防止橙狐在解密后重新运行自启动进程
-export OF_NO_RELOAD_AFTER_DECRYPTION=1
+# export OF_NO_RELOAD_AFTER_DECRYPTION=1
 # 设置一个很老的build时间，用于解决某些ROM例如MIUI刷机脚本里的防回滚保护检测
-export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800"; # Tuesday, January 1, 2019 12:00:00 AM GMT+00:00
+# export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800"; # Tuesday, January 1, 2019 12:00:00 AM GMT+00:00
 # 防止用户在不使用metadata加密的ROM中重复被metadata装载错误提示刷屏
-export OF_FBE_METADATA_MOUNT_IGNORE=1
+# export OF_FBE_METADATA_MOUNT_IGNORE=1
 # 手动刷入OTA增量包时尝试进入OpenRecoveryScript模式完成更新
-export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
+# export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 # 尝试处理AVB2.0，防止橙狐被官方recovery替换，实测此机型无效
 # export OF_PATCH_AVB20=1
 # 在具有此功能的自定义ROM上支持基于块的增量OTA
-export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
+# export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
 # 关闭修改橙狐启动画面功能，这个功能可能会导致重启无限卡MI
 export OF_NO_SPLASH_CHANGE=1
 # 禁用橙狐内置的magisk菜单
@@ -103,6 +103,6 @@ export OF_NO_SPLASH_CHANGE=1
 # 当修补recovery/boot镜像时，始终指示magiskboot v24+修补vbmeta标头（自动禁用avb验证？）
 export FOX_PATCH_VBMETA_FLAG=1
 # 修复部分设备或者rom的解密问题
-export OF_FIX_DECRYPTION_ON_DATA_MEDIA=1
+# export OF_FIX_DECRYPTION_ON_DATA_MEDIA=1
 
 echo -e "\x1b[96mcezanne: 当你看到这个消息的时候，所有的OrangeFox Var已经添加完毕！\x1b[m"
