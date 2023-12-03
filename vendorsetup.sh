@@ -51,7 +51,7 @@ export OF_FLASHLIGHT_ENABLE=0
 ## 界面显示设定
 # 设置屏幕高度，状态栏高度，状态栏左右边距
 # 由于橙狐默认屏幕比例是16：9,所以应设置屏幕高度为屏幕比例换算成n：9之后，n*120
-export OF_SCREEN_H=405
+export OF_SCREEN_H=720
 export OF_STATUS_H=90
 export OF_STATUS_INDENT_LEFT=90
 export OF_STATUS_INDENT_RIGHT=90
