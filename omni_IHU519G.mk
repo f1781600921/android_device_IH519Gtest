@@ -16,7 +16,7 @@ $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, device/ecarx/IHU519G/device.mk)
 
 PRODUCT_DEVICE := IHU519G
-PRODUCT_NAME := twrp_IHU519G
+PRODUCT_NAME := omni_IHU519G
 PRODUCT_BRAND := ecarx
 PRODUCT_MODEL := FS11A1
 PRODUCT_MANUFACTURER := ecarx
