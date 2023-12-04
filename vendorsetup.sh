@@ -64,6 +64,7 @@ export OF_ALLOW_DISABLE_NAVBAR=0
 
 ## 使刷机包兼容红米K30 Ultra
 export TARGET_DEVICE_ALT="IHU519G"
+export TARGET_DEVICE_ALT="omni_IHU519G"
 
 ## 添加橙狐特殊处理
 # 设定recovery、system、vendor、boot分区路径
